@@ -16,11 +16,11 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log("OnInit ejecutado");
+   // console.log("OnInit ejecutado");
   }
 
   ngDoCheck(): void {
-   console.log("DoCheck ejecutado");
+   // console.log("DoCheck ejecutado");
   }
 
   cambiarTitulo(){
@@ -28,7 +28,7 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log("onDestroy ejecutado!")
+   // console.log("onDestroy ejecutado!")
   }
 
 }
