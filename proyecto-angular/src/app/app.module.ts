@@ -8,6 +8,14 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
+import { EditComponent } from './components/edit/edit.component';
+
+import * as $ from 'jquery';
+import { SliderComponent } from './components/slider/slider.component';
+import { ResaltadoDirective } from './resaltado.directive';
 
 @NgModule({
   declarations: [
@@ -16,11 +24,17 @@ import { ErrorComponent } from './components/error/error.component';
     ProjectsComponent,
     CreateComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetailComponent,
+    EditComponent,
+    SliderComponent,
+    ResaltadoDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

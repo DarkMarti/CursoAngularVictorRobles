@@ -3,6 +3,7 @@
 const project = require('../models/project');
 var Project = require('../models/project');
 var fs = require('fs');
+var path = require('path');
 
 var controller = {
 
@@ -126,7 +127,23 @@ var controller = {
                 message: fileName
             });  
         }
+    },
+
+    getImageFile: function(req, res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+
+        fs.exists(path_file,(exists) => {
+            if(exists){
+                return res.sendFile(path.resolve(path_file));
+            }else{
+                return res.status(200).send({
+                    message: "No existe la imagen..."
+                })
+            }
+        });
     }
+
 };
 
 module.exports = controller;
