@@ -91,7 +91,7 @@ header a:hover, .actived{
 
 /*Contenedor principal*/
 #content{
-  min-height: 600px;
+  min-height: 750px;
   height: auto;
   width: 75%;
   margin: 0px auto;
@@ -143,6 +143,12 @@ article.about{
 }
 
 .about h2{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.about h4{
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   margin-bottom: 5px;
@@ -286,7 +292,7 @@ form input[disabled]{
 
 .project .image{
   width: 100%;
-  height: 150px;
+  height: 300px;
   overflow: hidden;
 }
 

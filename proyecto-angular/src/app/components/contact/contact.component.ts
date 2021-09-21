@@ -13,6 +13,10 @@ export class ContactComponent implements OnInit {
   public captions : boolean;
   public autor: any;
 
+  public telefono: number = 696337347;
+  public email: string = "marti_bk@hotmail.com";
+
+
   @ViewChild('textos') textos: any;
 
   constructor() {
