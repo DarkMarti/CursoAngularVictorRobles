@@ -9,13 +9,13 @@ export class AboutComponent implements OnInit {
 
   public title: string;
   public subtitle: string;
-  public web: string;
+  public email: string;
 
 
   constructor() {
-    this.title = "Marti Borislavov";
+    this.title = "Marti Borislavov Kroumov";
     this.subtitle = "Programador junior";
-    this.web = "www.martibk.es";
+    this.email = "marti_bk@hotmail.com";
   }
 
   ngOnInit(): void {

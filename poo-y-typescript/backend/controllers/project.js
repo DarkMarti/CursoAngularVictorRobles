@@ -38,10 +38,10 @@ var controller = {
             return res.status(200).send({project:projectStored});
         });
 
-        return res.status(200).send({
+        /*return res.status(200).send({
             project: project,
             message: "Metodo saveProject"
-        })
+        })*/
     },
     getProject: function(req, res){
         var projectId = req.params.id;
@@ -80,7 +80,7 @@ var controller = {
 
             return res.status(200).send({
                 project : projectUpdate
-            })
+            });
          });
     },
     deleteProject : function(req, res){
@@ -107,7 +107,7 @@ var controller = {
             var extSplit = fileName.split('\.');
             var fileExt = extSplit[1];
 
-            if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif'){
+            if(fileExt.toLowerCase() == 'png' || fileExt.toLowerCase() == 'jpg' || fileExt.toLowerCase() == 'jpeg' || fileExt.toLowerCase() == 'gif'){
                 Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated) => {
                 if(err) return res.status(500).send({ message: 'La imagen no se ha subido'});
 
@@ -116,10 +116,11 @@ var controller = {
                 return res.status(200).send({
                     project: projectUpdated
                 });  
-            });  
+            }); 
+
             }else{
                 fs.unlink(filePath, (err) => {
-                    return res.status(200).send({message : "La extensión no es válida"})
+                    return res.status(200).send({message : "La extensión no es válida"});
                 });
             }       
         }else{
@@ -139,7 +140,7 @@ var controller = {
             }else{
                 return res.status(200).send({
                     message: "No existe la imagen..."
-                })
+                });
             }
         });
     }
