@@ -11,6 +11,7 @@ import { CaracteristicasEmpleadoCComponent } from './caracteristicas-empleado-c/
 import { ServicioEmpleadosService } from './servicio-empleados.service';
 import { EmpleadosService } from './empleados.service';
 import { HomeComponent } from './home/home.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     CalculadoraComponent,
     EmpleadoHijoCComponent,
     CaracteristicasEmpleadoCComponent,
-    HomeComponent
+    HomeComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,
